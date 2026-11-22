@@ -1,0 +1,7 @@
+
+# Project
+.env
+*.p8
+data/raw/*
+!data/raw/.gitkeep
+.DS_Store
