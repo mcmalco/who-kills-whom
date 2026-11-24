@@ -8,3 +8,4 @@ data/raw/*
 .pyprojectx/
 .venv/
 __pycache__/
+logs/

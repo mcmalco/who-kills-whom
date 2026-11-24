@@ -1,0 +1,9 @@
+version: 2
+
+sources:
+  - name: raw
+    database: HOMICIDE
+    schema: RAW
+    tables:
+      - name: shr_homicides
+        description: "FBI Supplementary Homicide Reports (Murder Accountability Project). One row per victim."
