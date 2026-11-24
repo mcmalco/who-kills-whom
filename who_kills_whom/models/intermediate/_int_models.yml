@@ -1,0 +1,28 @@
+version: 2
+
+models:
+  - name: int_homicides
+    description: "One row per murder victim, with relationship and weapon grouped for analysis."
+    columns:
+      - name: victim_id
+        data_tests:
+          - unique
+          - not_null
+      - name: incident_id
+        data_tests:
+          - not_null
+      - name: relationship_group
+        data_tests:
+          - accepted_values:
+              arguments:
+                values: ['Intimate partner', 'Family', 'Acquaintance', 'Stranger', 'Unknown']
+      - name: weapon_group
+        data_tests:
+          - accepted_values:
+              arguments:
+                values: ['Gun', 'Knife', 'Hands/feet', 'Blunt object', 'Strangulation', 'Other', 'Unknown']
+      - name: offender_sex
+        data_tests:
+          - accepted_values:
+              arguments:
+                values: ['Male', 'Female', 'Unknown']

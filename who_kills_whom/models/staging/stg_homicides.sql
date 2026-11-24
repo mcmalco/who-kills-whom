@@ -3,7 +3,8 @@ with source as (
 )
 
 select
-    id                                      as homicide_id,
+    id                                      as incident_id,
+    id || '-' || row_number() over (partition by id order by vicage, vicsex, vicrace) as victim_id,
     try_to_number(year)                     as year,
     month                                   as month_name,
     state                                   as state_name,
